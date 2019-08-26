@@ -2,6 +2,7 @@
 extern crate clap;
 use clap::{App, Arg};
 use interledger::node::InterledgerNode;
+use log::debug;
 
 #[allow(clippy::cognitive_complexity)]
 fn main() {
@@ -22,7 +23,7 @@ fn main() {
         .get_matches();
 
     let config_path = matches.value_of("config").unwrap();
-    println!("Value for config_path: {}", config_path);
+    debug!("Value for config_path: {}", config_path);
 
     let mut node_config = config::Config::new();
     node_config
