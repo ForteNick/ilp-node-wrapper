@@ -1,7 +1,8 @@
 #[macro_use]
 extern crate clap;
 use clap::{App, Arg};
-use interledger::node::InterledgerNode;
+// use interledger::node::InterledgerNode;
+use ilp_node::InterledgerNode;
 use log::debug;
 
 #[allow(clippy::cognitive_complexity)]
